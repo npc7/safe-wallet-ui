@@ -63,10 +63,10 @@ export function firebaseMessagingSw() {
     }
 
     cacheServiceWorkerPushNotificationTrackingEvent('shown', data)
-
     self.registration.showNotification(notification.title || '', {
       icon: ICON_PATH,
       body: notification.body,
+      // @ts-ignore
       image: notification.image,
       data,
     })
